@@ -1,6 +1,11 @@
 use clap::Parser;
 #[derive(Parser, Debug)]
-#[command(author, version, about, long_about = None)]
+#[command
+  (author="pretham",
+  version="1.0",
+  about="simple temprature converter",
+  long_about = None)
+]
 struct Args {
     #[arg(short('F'),long,default_value_t=false)]
     iffaren:bool,
