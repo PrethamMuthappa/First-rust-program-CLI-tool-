@@ -4,11 +4,12 @@ This program can convert temperature from celsius to farenheit and vice versa th
 
 `cargo run -- -help `
 ```
-Usage: clap [OPTIONS] --celsious <CELSIOUS> --fare <FARE>
+simple temperature converter
+Usage: clap [OPTIONS]
 
 Options:
   -F, --iffaren              
-  -c, --celsius <CELSIOUS>  
+  -c, --celsius <CELSIUS>  
   -f, --farenhite <FARE>          
   -h, --help                 Print help
   -V, --version              Print version
