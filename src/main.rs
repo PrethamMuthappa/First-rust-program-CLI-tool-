@@ -3,7 +3,7 @@ use clap::Parser;
 #[command
   (author="pretham",
   version="1.0",
-  about="simple temprature converter",
+  about="simple temperature converter",
   long_about = None)
 ]
 struct Args {
