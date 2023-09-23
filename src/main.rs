@@ -1,22 +1,20 @@
 use clap::Parser;
-
 #[derive(Parser, Debug)]
 #[command(author, version, about, long_about = None)]
 struct Args {
-
-    #[arg(short('f'),long)]
+    #[arg(short('F'),long,default_value_t=false)]
     iffaren:bool,
 
-    #[arg(short, long)]
-    celsious: f32,
+    #[arg(short, long, default_value_t=0.0)]
+    celsius: f32,
 
-    #[arg(short('Z'),long)]
+    #[arg(short('f'),long,default_value_t=0.0)]
     fare:f32,
 
 }
 impl Args {
     fn con(&self)->f32 {
-        (self.celsious*9.0/5.0)+32.0
+        (self.celsius*9.0/5.0)+32.0
     }
 
     fn far(&self)->f32 {
@@ -26,15 +24,14 @@ impl Args {
 
 fn main() {
     let args = Args::parse();
-
-    let abc=args.con();
-    let abd = args.far();
+    let cc=args.con();
+    let ff = args.far();
 
     if !args.iffaren {
-        println!("celsious is {:?} converted to {:?}F", args.celsious, abc)
+        println!("celsius is {:?} converted to {:?}F", args.celsius, cc)
     }
     else {
-        println!("farenhite is {:?} converted to {:?}C", args.fare, abd)
+        println!("farenhite is {:?} converted to {:?}C", args.fare, ff)
     }
 
 }
